@@ -1,0 +1,13 @@
+iTShelter to prosty clicker bazujący nieco na znanym tytule Fallout Shelter.
+Wcielamy się w rolę kierownika w postapokaliptycznym świecie, który musi
+zarządzać budynkami produkującymi zasoby. Zasobami w grze są: energia, woda,
+jedzenie i nauka. Kiedy pasek wydobycia jest pełny, ikonki zasobów zaświecą
+się na zielono. Wtedy należy na nie kliknąć aby zwolnić zasób i odebrać monety.
+Otrzymywane monety zwiększają się wraz z rozwojem budynków. Każdy budynek może
+osiągnąc maksymalnie 10 poziom i może mieć co najwyżej 10 pracowników. Kuchnia
+oraz pokój naukowców nie produkują zasbów w godzinach 23.00 - 6.00. Pozostałe
+budynki pracują nieustannie. W trakcie gry mogą przytrafić się awarie
+poszczególnych budynków. Należy ostrożnie zarządzać monetami, ponieważ 
+w sytuacji kiedy nie będziemy mieć odpowiedniej ilości na ich naprawę, możemy 
+zbankrutować. Grę wygrywamy kiedy każdy budynek osiągnie 10 poziom oraz będzie 
+miał po 10 pracowników
