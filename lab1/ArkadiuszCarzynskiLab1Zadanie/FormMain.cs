@@ -6,19 +6,27 @@ namespace ArkadiuszCarzynskiLab1Zadanie
 {
     public partial class FormMain : Form
     {
-        
+        // zmienne przechowujące informacje o godzinie, minucie i indeksie dnia(potrzebne do tablicy)
         private int hour = 12, minutes = 0, dayIndex = 0;
+        // zmienne przechwujace poziom kazdego budynku
         private int powerGeneratorLevel = 1, kitchenLevel, waterTreatmentLevel, scienceRoomLevel;
+        // zmienne przechowujace liczbe pracownikow w kazdym budynku
         private int powerGeneratorWorkers = 1, kitchenWorkers, waterTreatmentWorkers, scienceRoomWorkers;
+        // zmienne przechowujace koszt zatrudnienia pracownika i rozbudowy w danym budynku
         private double powerGeneratorCurrentPrice = 500, powerGeneratorWorkerPrice = 500;
         private int kitchenBuildPrice = 10000, waterTreatmentBuildPrice = 25000, scienceRoomBuildPrice = 50000;
+        // zmienna przechowująca ilość monet
         private double coins = 300;
+        // zmienna typu bool (prawda lub falsz) przechowująca informację czy trwa przerwa od pracy
         private bool breakTime = false;
         private double kitchenCurrentPrice = 1000, kitchenWorkerPrice = 1000;
         private double scienceRoomCurrentPrice = 2000, scienceRoomWorkerPrice = 2000;
         private double waterTreatmentCurrentPrice = 1500, waterTreatmentWorkerPrice = 1500;
+        // tablica przechowujace informacje czy dany budynek jest wybudowany
         private bool[] buildings = new bool[4];
+        // tablica przechowujące nazwy budynków
         private string[] buildingsName = { "Elektrownia", "Kuchnia", "Hydrofornia", "Pokój naukowców" };
+        // tablica przechowująca nazwy dni tygodnia
         private string[] day = { "Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota", "Niedziela" };
         
         /// <summary>
@@ -32,13 +40,17 @@ namespace ArkadiuszCarzynskiLab1Zadanie
             labelUserName.Text = userName;
             timerMain.Start();
             
+            // wszystkie budynki oprocz elektrownii sa niewybudowane
             for(int i=1; i<4; i++)
             {
                 buildings[i] = false;
             }
+            // elektrownia jest wybudowana na start
             buildings[0] = true;
             labelDay.Text = day[dayIndex];
             labelHour.Text = hour.ToString();
+
+            // ustawienie interwalu zegara obslugujacego czas w grze
             timerTimeInGame.Interval = 5;
             timerMain.Interval = 5;
             timerTimeInGame.Start();
@@ -47,6 +59,7 @@ namespace ArkadiuszCarzynskiLab1Zadanie
             labelWaterTreatmentLevel.Visible = labelWaterTreatmentWorkers.Visible = labelWaterTreatmentPace.Visible = false;
             labelScienceRoomLevel.Visible = labelScienceRoomPace.Visible = labelScienceRoomWorkers.Visible = false;
 
+            // ustawienie kroku dla wszystkich pasków postępu na 5
             progressBarPower.Step = progressBarFood.Step = progressBarWater.Step = progressBarScience.Step = 5;
             progressBarPower.ForeColor = progressBarFood.ForeColor = progressBarWater.ForeColor = progressBarScience.ForeColor = Color.Yellow;
             progressBarPower.BackColor = progressBarFood.BackColor = progressBarWater.BackColor = progressBarScience.BackColor = Color.Black;
@@ -497,11 +510,14 @@ namespace ArkadiuszCarzynskiLab1Zadanie
             }
 
             // awaria
+            // obiekt klasy Random, potrzebny do generowanie liczb pseudolowosych
             Random rand = new Random();
             if(rand.Next(0,1000000) >= 100 & rand.Next(0, 1000000) <= 800)
             {
-                //wylosowanie ktory budynek bedzie mial awarie
+                // zmienna przechowująca informację, który wylosowany budynek bedzie mial awarie
                 int buildingIndex = rand.Next(0, 4);
+
+                // sprawdzenie czy wylosowany budynek jest zbudowany
                 if(buildings[buildingIndex])
                 {
                     // zatrzymanie wszystkich clockow
