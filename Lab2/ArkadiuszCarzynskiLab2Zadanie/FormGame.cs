@@ -312,7 +312,8 @@ namespace ArkadiuszCarzynskiLab2Zadanie
             switch (sub)
             {
                 case "Priest" when radioButtonPriest.Checked == true
-                            && textBoxFirstName.Text == person.GetLastName()
+                            && textBoxFirstName.Text == person.GetFirstName()
+                            && textBoxLastName.Text == person.GetLastName()
                             && textBoxAge.Text == person.GetAge().ToString()
                             && textBoxHeight.Text == person.GetHeight().ToString()
                             && textBoxWeight.Text == person.GetWeight().ToString()
