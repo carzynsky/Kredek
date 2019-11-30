@@ -1,0 +1,16 @@
+Po klasie abstrakcyjnej Person dziedziczy 5 klas:
+- Priest
+- Worker
+- Trader
+- Tourist
+- Politician
+Implementują odpowiednie metody abstrakcyjne Pay(), Greeting().
+Dodatkowo klasa Priest dziedziczy po Interfejsie IGod, implementując
+metody PrayForMoreMoney() i PrayForLongerTime(). Klasa Politician dziedziczy
+po interfejsie IPolitics implementując metodę Views() określającą poglądy
+polityczne.
+
+Klasa Accident jest klasą abstrakcyjną. Dziedziczą po niej 2 klasy:
+- PowerFailure
+- Illness
+Implementują one metodę abstrakcyjną Description().
