@@ -92,6 +92,9 @@
             this.pictureBoxBook = new System.Windows.Forms.PictureBox();
             this.pictureBoxMainGameBackground = new System.Windows.Forms.PictureBox();
             this.buttonExitGameDuringGame = new System.Windows.Forms.Button();
+            this.labelAgeOnCardInfo = new System.Windows.Forms.Label();
+            this.labelWeightOnCardInfo = new System.Windows.Forms.Label();
+            this.labelHeightOnCardInfo = new System.Windows.Forms.Label();
             this.groupBoxPersonInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPixelBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCard)).BeginInit();
@@ -370,7 +373,7 @@
             this.labelAge.AutoSize = true;
             this.labelAge.BackColor = System.Drawing.Color.Plum;
             this.labelAge.ForeColor = System.Drawing.Color.Black;
-            this.labelAge.Location = new System.Drawing.Point(538, 512);
+            this.labelAge.Location = new System.Drawing.Point(565, 512);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(24, 17);
             this.labelAge.TabIndex = 10;
@@ -381,7 +384,7 @@
             this.labelWeight.AutoSize = true;
             this.labelWeight.BackColor = System.Drawing.Color.Plum;
             this.labelWeight.ForeColor = System.Drawing.Color.Black;
-            this.labelWeight.Location = new System.Drawing.Point(538, 530);
+            this.labelWeight.Location = new System.Drawing.Point(565, 546);
             this.labelWeight.Name = "labelWeight";
             this.labelWeight.Size = new System.Drawing.Size(24, 17);
             this.labelWeight.TabIndex = 11;
@@ -391,7 +394,7 @@
             // 
             this.labelHeight.AutoSize = true;
             this.labelHeight.BackColor = System.Drawing.Color.Plum;
-            this.labelHeight.Location = new System.Drawing.Point(538, 549);
+            this.labelHeight.Location = new System.Drawing.Point(565, 529);
             this.labelHeight.Name = "labelHeight";
             this.labelHeight.Size = new System.Drawing.Size(32, 17);
             this.labelHeight.TabIndex = 12;
@@ -422,7 +425,7 @@
             // 
             // timerPersonTime
             // 
-            this.timerPersonTime.Interval = 250;
+            this.timerPersonTime.Interval = 350;
             this.timerPersonTime.Tick += new System.EventHandler(this.timerPersonTime_Tick);
             // 
             // labelMoneyInfo
@@ -758,12 +761,48 @@
             this.buttonExitGameDuringGame.UseVisualStyleBackColor = false;
             this.buttonExitGameDuringGame.Click += new System.EventHandler(this.buttonExitGameDuringGame_Click);
             // 
+            // labelAgeOnCardInfo
+            // 
+            this.labelAgeOnCardInfo.AutoSize = true;
+            this.labelAgeOnCardInfo.BackColor = System.Drawing.Color.Plum;
+            this.labelAgeOnCardInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.labelAgeOnCardInfo.Location = new System.Drawing.Point(500, 511);
+            this.labelAgeOnCardInfo.Name = "labelAgeOnCardInfo";
+            this.labelAgeOnCardInfo.Size = new System.Drawing.Size(34, 15);
+            this.labelAgeOnCardInfo.TabIndex = 47;
+            this.labelAgeOnCardInfo.Text = "Wiek";
+            // 
+            // labelWeightOnCardInfo
+            // 
+            this.labelWeightOnCardInfo.AutoSize = true;
+            this.labelWeightOnCardInfo.BackColor = System.Drawing.Color.Plum;
+            this.labelWeightOnCardInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.labelWeightOnCardInfo.Location = new System.Drawing.Point(500, 546);
+            this.labelWeightOnCardInfo.Name = "labelWeightOnCardInfo";
+            this.labelWeightOnCardInfo.Size = new System.Drawing.Size(42, 15);
+            this.labelWeightOnCardInfo.TabIndex = 48;
+            this.labelWeightOnCardInfo.Text = "Waga:";
+            // 
+            // labelHeightOnCardInfo
+            // 
+            this.labelHeightOnCardInfo.AutoSize = true;
+            this.labelHeightOnCardInfo.BackColor = System.Drawing.Color.Plum;
+            this.labelHeightOnCardInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.labelHeightOnCardInfo.Location = new System.Drawing.Point(500, 529);
+            this.labelHeightOnCardInfo.Name = "labelHeightOnCardInfo";
+            this.labelHeightOnCardInfo.Size = new System.Drawing.Size(44, 15);
+            this.labelHeightOnCardInfo.TabIndex = 49;
+            this.labelHeightOnCardInfo.Text = "Wzrost";
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.labelHeightOnCardInfo);
+            this.Controls.Add(this.labelWeightOnCardInfo);
+            this.Controls.Add(this.labelAgeOnCardInfo);
             this.Controls.Add(this.buttonExitGameDuringGame);
             this.Controls.Add(this.labelOrdinance);
             this.Controls.Add(this.progressBarMath);
@@ -887,5 +926,8 @@
         private System.Windows.Forms.Timer timerMath;
         private System.Windows.Forms.Label labelOrdinance;
         private System.Windows.Forms.Button buttonExitGameDuringGame;
+        private System.Windows.Forms.Label labelAgeOnCardInfo;
+        private System.Windows.Forms.Label labelWeightOnCardInfo;
+        private System.Windows.Forms.Label labelHeightOnCardInfo;
     }
 }
