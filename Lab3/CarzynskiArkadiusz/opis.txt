@@ -1,0 +1,10 @@
+Aplikacja ma za zadanie zarządzać bazą danych firmy CarRental zajmującej się wypożyczaniem'
+samochodów. Dostęp do aplikacji mogą mieć tylko pracownicy. Do logowania potrzebny jest id
+pracownika oraz jego hasło. Dla ułatwienia korzystania z aplikacji, do bazy został wprowadzony
+użytkownik o id=7 oraz haśle "TEST". Po zalogowaniu mamy dostęp do aktualnej bazy przechowującej
+informacje o samochodach, klientach, pracownikach, miejscach pracy oraz wypożyczeniach. 
+Odpowiednie przycisk na interfejsie pozwalają wyświetlać interesujące nas dane. Do 
+poprawnego wyświetlanie użyte zostały złączenia join. W górnym pasku zalogowany pracownik może
+wybrać opcję dodania/usuwania klientów, samochodów, pracowników, miejsc pracy czy zamówień.
+Do usunięcia danego obiektu z bazy wystarczy podanie jego ID. Formatem wprowadzanej daty jest:
+ROK-MIESIĄC-DZIEŃ.
