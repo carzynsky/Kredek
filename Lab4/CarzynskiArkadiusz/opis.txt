@@ -1,0 +1,13 @@
+Aplikacja pozwala na przeglądanie, dodawanie i usuwanie danych z bazy danych 
+dotyczącej Piłki nożnej. Relacyjna baza danych składa się z 5 tabel:
+* Footballers,
+* Stadiums,
+* Coaches,
+* Clubs,
+* Countries
+Dodatkowo w bazie dostępne są przykładowe dane początkowe.
+Zastosowane zostały 4 relacje typu jeden do wielu:
+Kraje - Piłkarze (piłkarz należy do jednego kraju, kraj ma wielu piłkarzy),
+Stadiony - Kluby (klub ma jeden stadion, na danym stadionie może rozgrywac mecze wiele klubów,
+Trenerzy - Kluby (trener może trenować wiele klubów, klub może mieć jednego trenera),
+Kluby - Piłkarze (piłkarz ma jeden klub, klub ma wielu piłkarzy).
