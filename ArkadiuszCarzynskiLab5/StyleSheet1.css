@@ -1,0 +1,35 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+body
+{
+    font-family: 'Playfair Display', serif;
+
+    background-color:  hsl(15, 5%, 15%);
+    color:white;
+    font-size: 25px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.title
+{
+    padding: 40px 0;
+    text-align: center;
+    background-color: rgb(150, 78, 192);
+    height: 250px;
+    color: black;
+    margin: 0;
+}
+.container
+{
+    margin: 5% 30% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box
+{
+    width: 150px;
+    height: 150px;
+    margin: 0 15px 40px;
+    border: 2px solid white;
+    transition:  all 0.4s ease-in;
+}
