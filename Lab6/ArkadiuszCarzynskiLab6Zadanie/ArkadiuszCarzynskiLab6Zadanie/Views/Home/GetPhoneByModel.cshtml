@@ -1,0 +1,31 @@
+﻿@model PhoneViewModel
+@{
+    ViewData["Title"] = "GetPhoneByModel";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+</head>
+<body>
+    <h2>
+        <div>
+            <!--Model telefonu-->
+            <h2>@Model.Model</h2>
+            <!--Obrazek-->
+            <img src="@Url.Content(Model.Picture)" alt="@Model.Picture" />
+            <!--Cena-->
+            <h2>Cena: @Model.Price zł</h2>
+            <!--Informacja o procesorze-->
+            <h5>Procesor: @Model.CPU</h5>
+            <!--RAM-->
+            <h5>RAM: @Model.RAM GB</h5>
+            <!--Wymiary telefonu-->
+            <h5>Wymiary: @Model.Dimensions</h5>
+            <!--Waga telefonu-->
+            <h5>Waga: @Model.Weight g</h5>
+            <hr />
+        </div>
+    </h2>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "GetListOfAllPhones";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+</head>
+<body>
+    <h1>Lista wszystkich telefonów w sklepie</h1>
+    <ul>
+        @foreach (var phone in Model)
+        {
+            <li>@Html.ActionLink(phone, "GetPhoneByModel", "Home", new { model = phone }, null) </li>
+        }
+    </ul>
+</body>
+</html>
+

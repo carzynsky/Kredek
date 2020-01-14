@@ -1,0 +1,34 @@
+﻿@model List<CarViewModel>
+@{
+    ViewData["Title"] = "GetAllCars";
+}
+
+<h2>GetAllCars</h2>
+
+<!--Iteracja po wszystkich elementach listy-->
+@foreach (var car in Model)
+{
+    <div class="cars">
+        <h2>@car.Model</h2>
+        <h4>Producent: @car.Manufacturer</h4>
+        <h4>Cena: @car.Price  zł</h4>
+        <img id='pic' src="@Url.Content(car.Photo)" alt="@car.Model"/>
+        <hr />
+    </div>
+
+}
+
+<button type="button" class="hideCars">Usuń zdjęcia samochodów</button> 
+
+<script>
+    let carsAmount = document.getElementsByClassName('cars').length;
+    let btn = document.querySelector('.hideCars');
+    btn.addEventListener('click', function () {
+        for (let i = 0; i < carsAmount; i++)
+        document.getElementsByTagName("img")[i].removeAttribute("src");
+
+}   
+    );
+    
+
+</script>

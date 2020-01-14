@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+body
+{
+    background-color: #161515;
+    color: #ffffff;
+}
+
+#content
+{
+    margin-top: 250px;
+    margin-left: 130px;
+}
+.tile
+{
+    float:left;
+    background-color: #161515;
+    border: solid 1px #6537c7;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    width: 130px;   
+    height: 60px;
+    padding: 10px;
+    padding-top: 4px;
+    text-align: center;
+    margin-right: 50px;
+    transition: all 0.4s ease-in;
+}
+
+.tile:hover
+{
+    cursor: pointer;
+    opacity: 0.7;
+}

@@ -1,0 +1,66 @@
+﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "OrderForm";
+}
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+<!--Formularz kontaktowy-->
+@using (Html.BeginForm("OrderForm", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Order phone</h4>
+        <hr />
+        <!--Imię-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <!--Nazwisko-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <!--Mail-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mail, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <!--Producent-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <!--Model-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Model, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <!--Model-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Color, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Color, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    <h2>@Html.ActionLink("Back", "Index")</h2>
+</div>
+

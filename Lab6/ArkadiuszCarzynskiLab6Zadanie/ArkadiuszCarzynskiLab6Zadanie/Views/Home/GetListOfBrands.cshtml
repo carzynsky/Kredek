@@ -1,0 +1,23 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "GetListOfBrands";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+</head>
+<body>
+    <h1>Lista producentów smartfonów dostępnych w sklepie</h1>
+    <ul>
+        @foreach (var brand in Model)
+        {
+            <li>@Html.ActionLink(@brand, "GetAllPhonesByBrand", "Home", new { Brand = brand }, null)</li>
+        }
+    </ul>
+</body>
+</html>
+
+
+
+

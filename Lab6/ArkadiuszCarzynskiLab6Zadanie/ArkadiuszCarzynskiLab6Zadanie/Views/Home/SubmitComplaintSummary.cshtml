@@ -1,0 +1,21 @@
+﻿@model ComplaintViewModel
+@{
+    ViewData["Title"] = "SubmitComplaintSummary";
+}
+
+<h1>Submitted complaint</h1>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+</head>
+<body>
+    <!--Producent i model telefonu-->
+    <h2>Model: @Model.Brand @Model.Model</h2>
+    <hr />
+    <!--Opis reklamacji-->
+    <h3>Opis: @Model.Description</h3>
+</body>
+</html>
+
+

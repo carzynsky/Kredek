@@ -1,0 +1,28 @@
+﻿@model List<PhoneViewModel>
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="@Url.Content("~/Scripts/Style.css")" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>@Model[0].Brand</h1>
+    @foreach (var phone in Model)
+    {
+        <div>
+            <h2>@phone.Model</h2>
+            <img src="@Url.Content(phone.Picture)" alt="@phone.Picture" />
+            <h2>Cena: @phone.Price zł</h2>
+            <h5>Procesor: @phone.CPU</h5>
+            <h5>RAM: @phone.RAM GB</h5>
+            <h5>Wymiary: @phone.Dimensions</h5>
+            <h5>Waga: @phone.Weight g</h5>
+            <hr />
+        </div>
+    }
+</body>
+</html>
+
+

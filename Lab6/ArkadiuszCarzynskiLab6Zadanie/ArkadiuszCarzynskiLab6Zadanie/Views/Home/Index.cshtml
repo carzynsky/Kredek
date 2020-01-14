@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+</head>
+<body>
+    <div id="content">
+        <div class="tile">
+            <!--Przejście do podstrony z listą wszystkich brandów-->
+            <a class="link">@Html.ActionLink("Show all brands", "GetListOfBrands", "Home")</a>
+        </div>
+        <div class="tile">
+            <!--Przejście do podstrony z listą wszystkich modeli-->
+            <a>@Html.ActionLink("Show all smartphones", "GetListOfAllPhones", "Home")</a>
+        </div>
+
+        <div class="tile">
+            <!--Przejście do podstrony z zamówieniem-->
+            <a>@Html.ActionLink("Order smartphone", "OrderForm", "Home")</a>
+        </div>
+
+        <div class="tile">
+            <!--Przejście do podstrony z dodaniem smartfonu-->
+            <a>@Html.ActionLink("Add smartphone", "AddPhone", "Home")</a>
+        </div>
+
+        <div class="tile">
+            <!--Przejście do podstrony ze złożeniem skargi-->
+            <a>@Html.ActionLink("Submit complaint", "SubmitComplaint", "Home")</a>
+        </div>
+    </div>
+</body>
+</html>
+
+

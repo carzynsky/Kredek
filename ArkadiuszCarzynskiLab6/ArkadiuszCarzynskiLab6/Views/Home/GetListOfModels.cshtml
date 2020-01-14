@@ -1,0 +1,16 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "GetListOfModels";
+}
+
+<h2>GetListOfModels</h2>
+
+<!--Utworzenie listy wypunktowanej-->
+<ul>
+    @foreach(var car in Model)
+    {
+        // Utworzenie punktu z kolejnym modelem samochodu
+        <li>@Html.ActionLink(car, "GetCarByModel", "Home", new { model = car }, null)</li>
+    }
+</ul>
+

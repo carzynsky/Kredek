@@ -1,0 +1,46 @@
+﻿@model ContactFormViewModel
+@{
+    ViewData["Title"] = "ContactForm";
+}
+
+<h2>ContactForm</h2>
+
+<!---Formularz kontaktowy-->
+@using (Html.BeginForm("ContactForm", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+    <!--Imię-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Nazwisko-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+
+
+    <!--Opis-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Description, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Przycisk wysyłający formularz-->
+    <div class="form-group">
+        <div class="col-md-offset-2 cold-md-10">
+            <input type="submit" value="Wyślij" class="btn btn-success" />
+        </div>
+    </div>
+
+}
+
