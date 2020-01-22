@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ArkadiuszCarzynskiLab7Zadanie.Services
 {
-    public interface IFootballerService
+    public interface IClubService
     {
-        DbSet<Footballer> Get();
-        bool Post(Footballer footballer);
-        bool Put(Footballer footballer, int Id);
+        DbSet<Club> Get();
+        bool Post(Club club);
+        bool Put(Club club, int Id);
         bool Delete(int Id);
     }
 }

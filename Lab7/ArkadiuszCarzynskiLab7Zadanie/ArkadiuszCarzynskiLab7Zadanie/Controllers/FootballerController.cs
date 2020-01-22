@@ -38,8 +38,11 @@ namespace ArkadiuszCarzynskiLab7Zadanie.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Footballer footballer)
         {
-            _footballerService.Post(footballer);
-            return Ok();
+            var post = _footballerService.Post(footballer);
+            if (post)
+                return Ok();
+            else
+                return Conflict("Nie można podać takiej pozycji!");
         }
 
         /// <summary>
@@ -52,24 +55,18 @@ namespace ArkadiuszCarzynskiLab7Zadanie.Controllers
         [Route("{id:int}")]
         public IActionResult Put([FromBody] Footballer footballer, [FromRoute] int id)
         {
-            if (id != footballer.Id)
+            var isUpdateSuccessful = _footballerService.Put(footballer, id);
+
+            if (isUpdateSuccessful)
             {
-                return Conflict("Nie można edytować id!");
+                return Ok();
             }
+
             else
             {
-                var isUpdateSuccessful = _footballerService.Put(footballer, id);
-                {
-                    if (isUpdateSuccessful)
-                    {
-                        return NoContent();
-                    }
-                    else
-                    {
-                        return NotFound();
-                    }
-                }
+                return Conflict("Nie można zmienić podanych wartości!");
             }
+
         }
 
         /// <summary>
@@ -94,9 +91,5 @@ namespace ArkadiuszCarzynskiLab7Zadanie.Controllers
             }
 
         }
-
-
-
-
     }
 }

@@ -38,7 +38,7 @@ namespace ArkadiuszCarzynskiLab7Zadanie.Services
         /// </summary>
         /// <param name="footballer"></param>
         /// <returns></returns>
-        public void Post(Footballer footballer)
+        public bool Post(Footballer footballer)
         {
             List<string> possiblePositions = new List<string>()
             {
@@ -53,8 +53,10 @@ namespace ArkadiuszCarzynskiLab7Zadanie.Services
                 {
                     _context.Footballers.Add(footballer);
                     _context.SaveChanges();
-                }                                
+                    return true;
+                }   
             }
+            return false;
         }
 
         /// <summary>
@@ -66,10 +68,12 @@ namespace ArkadiuszCarzynskiLab7Zadanie.Services
         public bool Put(Footballer footballer, int Id)
         {
             var footballerToUpdate = _context.Footballers.Where(x => x.Id.Equals(Id)).Single(); 
+
             if (footballerToUpdate == null)
             {
                 return false;
             }
+
             if (footballerToUpdate.FirstName != footballer.FirstName || footballerToUpdate.LastName != footballer.LastName
                 || footballerToUpdate.Position != footballer.Position)
                 return false;
@@ -81,6 +85,11 @@ namespace ArkadiuszCarzynskiLab7Zadanie.Services
             return true;
         }
 
+        /// <summary>
+        /// Funkcja usuwająca piłkarza z bazy, zwraca informację o poprawności
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public bool Delete(int Id)
         {
             var footballerToDelete = _context.Footballers.Where(x => x.Id.Equals(Id)).Single();

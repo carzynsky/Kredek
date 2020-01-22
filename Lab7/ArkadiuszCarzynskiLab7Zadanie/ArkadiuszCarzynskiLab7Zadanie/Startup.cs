@@ -31,6 +31,7 @@ namespace ArkadiuszCarzynskiLab7Zadanie
             var connection = @"Server=DESKTOP-U4VRK31;Database=FootballManagment;Trusted_Connection=True;";
             services.AddDbContext<FootballManagmentContext>(options => options.UseSqlServer(connection));
             services.AddTransient<IFootballerService, FootballerService>();
+            services.AddTransient<IClubService, ClubService>();
             services.AddControllers();
         }
 
