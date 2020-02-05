@@ -1,0 +1,111 @@
+﻿@model Customers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>ContactForm</h2>
+
+<!---Formularz dodania do bazy klientów-->
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+
+
+    <!--Id klienta-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.CustomerId, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CustomerId, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Nazwa firmy-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.CompanyName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CompanyName, new { @class = "form-control" })
+        </div>
+    </div>
+
+
+    <!--Nazwa kontaktu-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.ContactName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ContactName, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Tytuł kontaktu-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.ContactTitle, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ContactTitle, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Adres-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Address, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Miasto-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.City, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.City, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Region-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Region, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Region, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Kod pocztowy-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.PostalCode, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.PostalCode, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Kraj-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Country, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Country, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Telefon-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Phone, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--Fax-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Fax, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Fax, new { @class = "form-control" })
+        </div>
+    </div>
+    <!--Przycisk wysyłający formularz-->
+    <div class="form-group">
+        <div class="col-md-offset-2 cold-md-10">
+            <input type="submit" value="Wyślij" class="btn btn-success" />
+        </div>
+    </div>
+
+}
+
